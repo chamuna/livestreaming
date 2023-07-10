@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Livestreaming Interface</title>
+    <style>
+        #video-container {
+            width: 100%;
+            height: auto;
+        }
+        #thumbnail-container {
+            width: 200px;
+            height: auto;
+        }
+        #thumbnail-image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="thumbnail-container">
+        <img id="thumbnail-image" src="" alt="Thumbnail">
+    </div>
+
+    <div id="video-container">
+        <video id="livestream-video" controls></video>
+    </div>
+
+    <script>
+        const videoElement = document.getElementById('livestream-video');
+        const thumbnailImage = document.getElementById('thumbnail-image');
+
+        // Replace 'livestream_url' with the actual URL of your livestream
+        const livestreamUrl = 'https://example.com/livestream';
+        // Replace 'thumbnail_url' with the URL of your thumbnail image
+        const thumbnailUrl = 'https://example.com/thumbnail.jpg';
+
+        // Set the thumbnail image source
+        thumbnailImage.src = thumbnailUrl;
+
+        // Set the livestream URL as the source for the video element
+        videoElement.src = livestreamUrl;
+    </script>
+</body>
+</html>
